@@ -3,11 +3,6 @@
 # Extract table of contents from index.html and delete preface link.
 BOOKDIR=book-$1
 TITLE="Git Magic"
-case $1 in
-    ru)
-        TITLE="Волшебство Git"
-        ;;
-esac
 
 gawk '
 /<div class="toc">/ {
