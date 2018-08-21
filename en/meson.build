@@ -14,11 +14,12 @@ txtfiles_sources = [
 
 if asciidoc.found()
   compile_file = files('meson_compile_book.py')
-  book_all_en_xml = custom_target(
-          'book-all-en.xml',
-          build_by_default: true,
-          input : txtfiles_sources,
-          output : 'book-all-en.xml',
-          command : [python3, compile_file, '--lang=en', '@INPUT@', '--out', '@OUTPUT@'],
-          install: false)
+  book_en_html = custom_target(
+    'book-en.html',
+    build_by_default: true,
+    input : txtfiles_sources,
+    output : 'book-en.html',
+    command : [python3, compile_file, '--lang=en', '@INPUT@'],
+    install: false
+  )
 endif

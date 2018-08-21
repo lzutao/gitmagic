@@ -1,7 +1,7 @@
 project('gitmagic', [],
-    version: '0.6.2',
-    license: 'GPLv3',
-    meson_version: '>= 0.42.0'
+  version: '0.6.2',
+  license: 'GPLv3',
+  meson_version: '>= 0.42.0'
 )
 
 gitmagic_name = meson.project_name()

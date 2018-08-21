@@ -21,7 +21,6 @@ book-en.xml: $(addprefix en/,$(TXTFILES))
 	# Kludge to support any translation of "Preface".
 	echo '[specialsections]' > conf ; \
 	sed -n '/^== .* ==$$/p' en/preface.txt | sed 's/^== \(.*\) ==$$/^\1$$=preface/' >> conf ; \
-	echo $^; \
 	( for FILE in $^ ; do \
 		if [ -f $$FILE ]; then \
 			cat $$FILE; \
